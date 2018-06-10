@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		735D17CD20CD1463000B4FAF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 735D17CC20CD1463000B4FAF /* main.cpp */; };
+		735D17CD20CD1463000B4FAF /* cards.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 735D17CC20CD1463000B4FAF /* cards.cpp */; };
+		735D17D520CD1496000B4FAF /* siete_y_medio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 735D17D420CD1496000B4FAF /* siete_y_medio.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		735D17C920CD1463000B4FAF /* card_game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = card_game; sourceTree = BUILT_PRODUCTS_DIR; };
-		735D17CC20CD1463000B4FAF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		735D17CC20CD1463000B4FAF /* cards.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cards.cpp; sourceTree = "<group>"; };
+		735D17D320CD1472000B4FAF /* cards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cards.h; sourceTree = "<group>"; };
+		735D17D420CD1496000B4FAF /* siete_y_medio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = siete_y_medio.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		735D17CB20CD1463000B4FAF /* card_game */ = {
 			isa = PBXGroup;
 			children = (
-				735D17CC20CD1463000B4FAF /* main.cpp */,
+				735D17CC20CD1463000B4FAF /* cards.cpp */,
+				735D17D320CD1472000B4FAF /* cards.h */,
+				735D17D420CD1496000B4FAF /* siete_y_medio.cpp */,
 			);
 			path = card_game;
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				735D17CD20CD1463000B4FAF /* main.cpp in Sources */,
+				735D17CD20CD1463000B4FAF /* cards.cpp in Sources */,
+				735D17D520CD1496000B4FAF /* siete_y_medio.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
