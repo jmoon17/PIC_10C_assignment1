@@ -60,6 +60,8 @@ public:
     // Useful if you want to sort the cards.
     bool operator < (Card card2) const;
     
+    void draw_card() const;
+    
 private:
     suit_t suit;
     rank_t rank;
@@ -71,10 +73,20 @@ public:
     // A vector of Cards
     Hand();
     
-    // You decide what functions you'll need...
+    void add_card(Card c);
+    void add_total(double total);
+    
+    void discard();             //reset cards
+
+    void print_hand();
+    
+    double get_total();
+
     
 private:
-    // You decide what fields you'll need...
+    double now_total;
+    vector<Card> now;
+    
 };
 
 
@@ -84,11 +96,14 @@ public:
     //    Assigns initial amount of money
     Player(int m);
     
-    // You decide what functions you'll need...
+    //Accessor
+    int get_money();                    //print player's current money
+    void update_money(int money);       //update player's new amount
+    
     
 private:
     int money;
-    // You decide what extra fields (if any) you'll need...
+    
 };
 
 #endif
