@@ -60,6 +60,7 @@ public:
     // Useful if you want to sort the cards.
     bool operator < (Card card2) const;
     
+    //prints card both in Spanish and English
     void draw_card() const;
     
 private:

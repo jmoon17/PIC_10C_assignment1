@@ -178,6 +178,15 @@ string Card::get_english_rank() const {
     return eng_rank;
 }
 
+void Card::draw_card() const
+{
+    //spanish version
+    cout << "\t" << get_spanish_rank() << " de " << get_spanish_suit();
+    //english version
+    cout << " (" << get_english_rank() << " of " << get_spanish_suit() << ")." << endl;
+    
+}
+
 
 // Assigns a numerical value to card based on rank.
 // AS=1, DOS=2, ..., SIETE=7, SOTA=10, CABALLO=11, REY=12
@@ -190,6 +199,7 @@ int Card::get_rank() const {
 bool Card::operator < (Card card2) const {
     return rank < card2.rank;
 }
+
 
 
 
