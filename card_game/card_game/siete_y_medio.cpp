@@ -18,10 +18,36 @@ using namespace std;
 
 
 // Non member functions declarations (if any)
-
+bool readResponse();
 
 // Non member functions implementations (if any)
-
+// Check if the user input is y or n
+bool readResponse() {
+    bool isYes = true;
+    string answer;
+    // Make a variable to help figure out if the input from user is good
+    bool isGoodInput = false; // assume NOT good to start
+    while (!isGoodInput) {
+        cout << "Do you want another card (y/n)? ";
+        cin >> answer;
+        
+        if (answer == "y" || answer == "Y") {
+            isYes = true;
+            isGoodInput = true;
+        }
+        
+        else if (answer == "n" || answer == "N") {
+            isYes = false;
+            isGoodInput = true;
+        }
+        
+        else {
+            // Ask again because the input is wrong
+            isGoodInput = false;
+        }
+    }
+    return isYes;
+}
 
 // Stub for main
 int main(){
