@@ -75,17 +75,17 @@ public:
     Hand();
     
     void add_card(Card c);
-    void add_total(double total);
+    void add_total(double val);
     
     void discard();             //reset cards
 
     void print_hand();
     
-    double get_total();
+    double get_sum();
 
     
 private:
-    double now_total;
+    double currentSum;
     vector<Card> now;
     
 };

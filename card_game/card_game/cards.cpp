@@ -208,6 +208,49 @@ bool Card::operator < (Card card2) const {
  ************************************************* */
 // Implemente the member functions of the Hand class here.
 
+//Default constructor
+Hand::Hand()
+{
+    now = vector<Card>();
+    currentSum = 0;
+}
+
+//pushback Card C decks to current hand
+void Hand::add_card(Card c)
+{
+    now.push_back(c);
+}
+
+//compute the value of the card by ranking
+void Hand::add_total(double val)
+{
+    if(val > 7)     //if ranking is above 7, add 0.5 to currentSum
+        currentSum += 0.5;
+    else            // if not, add currentSum based on the ranking of the card
+        currentSum += val;
+    
+}
+
+//reset hand
+void Hand::discard()
+{
+    currentSum = 0;
+}
+
+//print the current cards using draw_card function
+void Hand::print_hand()
+{
+    for(int i=0; i< now.size(); i++)
+    {
+        now[i].draw_card();
+    }
+}
+
+//return sum of cards in current hand
+double Hand::get_sum()
+{
+    return currentSum;
+}
 
 
 /* *************************************************
