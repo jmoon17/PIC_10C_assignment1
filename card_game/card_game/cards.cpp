@@ -231,7 +231,7 @@ void Hand::add_total(double val)
     
 }
 
-//reset hand
+//reset hand to zero
 void Hand::discard()
 {
     currentSum = 0;
