@@ -68,6 +68,23 @@ int main()
         
     }
     
+    //initiate game
+    Hand h;
+
+    Card c;
+    
+    //add card to the hand and compute the total value of the card
+    h.add_card(c);
+    h.add_total(c.get_rank());
+    
+    cout << "your cards: " << "\n" << "/t";
+    h.print_hand();
+    
+    cout << "Your total is " << h.get_sum() << endl;
+    
+    
+    
+    
     
     
     
