@@ -99,7 +99,7 @@ public:
     
     //Accessor
     int get_money();                    //print player's current money
-    void update_money(int money);       //update player's new amount
+    void update_money(int newAmt);       //update player's new amount
     
     
 private:

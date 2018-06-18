@@ -214,3 +214,24 @@ bool Card::operator < (Card card2) const {
  Player class
  ************************************************* */
 // Implemente the member functions of the Player class here.
+
+//constructor
+//parameter m is the starting money
+Player::Player(int m)
+{
+    money = m;
+}
+
+//accessor
+//returns the current budget
+int Player::get_money()
+{
+    return money;
+}
+
+//update player's new budget to the private variable
+void Player::update_money(int newAmt)
+{
+    money = newAmt;
+}
+
