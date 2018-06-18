@@ -52,7 +52,21 @@ bool readResponse() {
 // Stub for main
 int main()
 {
-
+    srand((int)(time(0)));
+    
+    Player p(100);
+    int bet;
+    
+    while(p.get_money()>0)
+    {
+        cout << "you have: $" <<p.get_money();
+        cout << ". Enter bet: ";
+        cin >> bet;
+        
+    }
+    
+    
+    
     
     return 0;
 }
