@@ -59,9 +59,12 @@ int main()
     
     while(p.get_money()>0)
     {
+        //run the loop until the bet exceeds current budget
+        do{
         cout << "you have: $" <<p.get_money();
         cout << ". Enter bet: ";
         cin >> bet;
+        }while(bet > p.get_money());
         
     }
     
