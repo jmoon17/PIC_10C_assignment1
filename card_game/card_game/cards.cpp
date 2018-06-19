@@ -222,7 +222,7 @@ void Hand::add_card(Card c)
 }
 
 //compute the value of the card by ranking
-void Hand::add_total(double val)
+void Hand::compute_total(double val)
 {
     if(val > 7)     //if ranking is above 7, add 0.5 to currentSum
         currentSum += 0.5;

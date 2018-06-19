@@ -75,7 +75,7 @@ public:
     Hand();
     
     void add_card(Card c);
-    void add_total(double val);
+    void compute_total(double val);
     
     void discard();             //reset cards
 

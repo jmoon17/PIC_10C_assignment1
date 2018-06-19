@@ -56,6 +56,7 @@ int main()
     
     Player p(100);
     int bet;
+    bool yesOrno = true;
     
     while(p.get_money()>0)
     {
@@ -66,8 +67,6 @@ int main()
         cin >> bet;
         }while(bet > p.get_money());
         
-    }
-    
     //initiate game
     Hand h;
 
@@ -75,18 +74,40 @@ int main()
     
     //add card to the hand and compute the total value of the card
     h.add_card(c);
-    h.add_total(c.get_rank());
-    
-    cout << "your cards: " << "\n" << "/t";
+    h.compute_total(c.get_rank());
+    do
+    {
+    cout << "your cards: " << "\n" << "\t";
     h.print_hand();
     
-    cout << "Your total is " << h.get_sum() << endl;
+        cout << "Your total is " << h.get_sum() <<". ";
+        
+    if(h.get_sum()>7.5)
+    {
+        cout << "You busted!" << endl;
+        break;
+    }
+    readResponse();
+
+    }while(readResponse() == yesOrno);
     
+    if(readResponse() == yesOrno)
+    {
+        Card c2;
+        h.add_card(c2);
+        c2.draw_card();
+        
+        cout << "your cards: ";
+        h.print_hand();
+        h.compute_total(c2.get_rank());
+        cout << "Your total is " << h.get_sum();
+    }
     
+    }
     
-    
-    
-    
+    cout << "You have $0. GAME OVER!" <<"\n";
+    cout << "Comeback when you have more money." << "\n";
+    cout << "Bye!" <<endl;
     
     return 0;
 }
