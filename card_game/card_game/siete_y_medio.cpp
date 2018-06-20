@@ -16,11 +16,47 @@ using namespace std;
 
 // Global constants (if any)
 
-
 // Non member functions declarations (if any)
-
+int checkWinner(double player, double dealer);
 
 // Non member functions implementations (if any)
+int checkWinner(double player, double dealer)
+{
+    int win = 1;
+    int lose = 2;
+    int draw = 3;
+    
+    // Both player and dealer have the same total and neither player busts
+    if(dealer == player && (player <= 7.5 && dealer <= 7.5)){
+        return draw;
+    }
+    
+    // Else if player's total exceeds 21.
+    else if( player > 7.5){
+        return lose;
+    }
+    
+    // else if player comes closer to 21
+    else if( player <= 7.5) {
+        
+        // The dealer busts, player wins
+        if(dealer >7.5){
+            return win;
+        }
+        
+        // The player comes closer to 21 than the dealer
+        else if(player >dealer){
+            return win;
+        }
+        
+        // The dealer comes closer to 21 than the player
+        else if(player < dealer){
+            return lose;
+        }
+    }
+
+    return 0;
+}
 
 
 // Stub for main
