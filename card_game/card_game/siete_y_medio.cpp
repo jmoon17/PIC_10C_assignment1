@@ -45,6 +45,7 @@ int main()
     
         //initiate game
         Hand h;
+        h.discard();    //reset
         Card c;
             
         //add card to the hand and compute the total value of the card
@@ -79,7 +80,32 @@ int main()
                 cin >> response;
             }   while ((response != "y") && (response != "n"));
         }
+        
+        Hand dealer;
+        dealer.discard();   //reset hand
+        
+        Card d1;
+        dealer.add_card(d1);
+        dealer.compute_total(d1.get_rank());
+        
+        cout << "Dealer's card: " << "\n" << "\t";
+        dealer.print_hand();
+        
+        cout << "The dealer's total is " << dealer.get_sum() <<". " <<endl;
+        
+        while(dealer.get_sum() < 5.5)
+        {
+            Card d2;
+            dealer.add_card(d2);
+            dealer.compute_total(d2.get_rank());
+            cout << "New card: " << endl;
+            d2.draw_card();
+            
+            cout << "Dealer's card: " << endl;
+            dealer.print_hand();
 
+            cout << "Your total is " << dealer.get_sum() << endl;
+        }
 
     }
     cout << "You have $0. GAME OVER!" <<"\n";
