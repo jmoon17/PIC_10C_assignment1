@@ -142,6 +142,27 @@ int main()
 
             cout << "Your total is " << dealer.get_sum() << endl;
         }
+        
+        //check conditions for checkWinner function
+        //add bet to the budget
+        if(checkWinner(h.get_sum(),dealer.get_sum()) == 1){
+            p.update_money(p.get_money()+bet);
+            cout << "\n" << "You win $" << bet << "." << endl << endl;
+        }
+        
+        //deduct bet from the budget
+        else if(checkWinner(h.get_sum(),dealer.get_sum()) == 2){
+             p.update_money(p.get_money()-bet);
+            cout << "\n" << "Too bad. You lose $" << bet << "." << endl << endl;
+        }
+        
+        //no money is exchanged
+        else if(checkWinner(h.get_sum(), dealer.get_sum()) == 3){
+            p.update_money(p.get_money());
+            cout << "\n" << "Nobody wins!" << endl << endl;
+        }
+        
+        
 
     }
     cout << "You have $0. GAME OVER!" <<"\n";
