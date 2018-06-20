@@ -20,6 +20,7 @@ The number of players is limited only by the size of the pack and the number of 
 /*****************************
 *******EXAMPLE OF PLAYS*******
 *****************************/
+
 You have $100.         Enter the bet: 10
 
 Your cards:     Rey de espadas (King of spades)
