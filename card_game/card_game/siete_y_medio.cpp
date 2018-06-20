@@ -22,32 +22,6 @@ using namespace std;
 bool readResponse();
 
 // Non member functions implementations (if any)
-//bool readResponse() {
-//    bool isYes = true;
-//    string answer;
-//    // Make a variable to help figure out if the input from user is good
-//    bool isGoodInput = false; // assume NOT good to start
-//    while (!isGoodInput) {
-//        cout << "Do you want another card (y/n)? ";
-//        cin >> answer;
-//
-//        if (answer == "y" || answer == "Y") {
-//            isYes = true;
-//            isGoodInput = true;
-//        }
-//
-//        else if (answer == "n" || answer == "N") {
-//            isYes = false;
-//            isGoodInput = true;
-//        }
-//
-//        else {
-//            // Ask again because the input is wrong
-//            isGoodInput = false;
-//        }
-//    }
-//    return isYes;
-//}
 
 // Stub for main
 int main()
@@ -56,7 +30,7 @@ int main()
     
     Player p(100);
     int bet;
-    bool yesOrno = true;
+
     string response;
     
     while(p.get_money()>0)
